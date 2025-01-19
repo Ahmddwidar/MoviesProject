@@ -42,6 +42,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/home/admin",
                                 "/dashboard/movies/omdb-fetch",
+                                "/dashboard/movies/add",
                                 "/dashboard/movies/add")
                         .hasAnyAuthority("Admin")
                         .requestMatchers("/dashboard/movies").authenticated()
